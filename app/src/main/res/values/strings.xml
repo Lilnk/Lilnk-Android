@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Lilnk</string>
+    <string name="VerNameInBtmSheet"> نسخه 1.9 - مایکت </string>
+    <string name="info_LeaveComment">ثبت نظر در مورد برنامه</string>
+    <string name="info_OtherApps">برنامه های دیگر</string>
+    <string name="info_Developer">توسعه دهنده : آرش عزیزی</string>
+</resources>

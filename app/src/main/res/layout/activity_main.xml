@@ -1,0 +1,328 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginBottom="16dp"
+    android:animateLayoutChanges="true"
+    android:background="@color/white"
+    android:padding="16dp"
+    tools:context=".MainActivity">
+
+
+    <RelativeLayout
+        android:layoutDirection="ltr"
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/btnInfo"
+                android:layout_width="40dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_marginTop="4dp"
+                android:alpha="0.9"
+                android:padding="4dp"
+                android:src="@drawable/ic_user_black"
+                android:textColor="@color/black" />
+
+            <ImageView
+                android:id="@+id/btnHistory"
+                android:layout_width="40dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginRight="8dp"
+                android:alpha="0.9"
+                android:padding="4dp"
+                android:src="@drawable/ic_history_new"
+                android:textColor="@color/black" />
+
+            <ImageView
+                android:id="@+id/btnWebsite"
+                android:layout_width="40dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_marginTop="4dp"
+                android:alpha="0.9"
+                android:padding="5dp"
+                android:src="@drawable/ic_global"
+                android:textColor="@color/black" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/TitleLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_weight="0.58"
+                android:fontFamily="@font/kalameh_black"
+                android:gravity="center"
+                android:text="لــیــلــیــنــک"
+                android:textColor="@color/black"
+                android:textSize="32sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="0.35"
+                android:fontFamily="@font/kalameh_regular"
+                android:gravity="center"
+                android:text="کـوتـاه کـنـنـده لـیـنـک"
+                android:textColor="@color/LittleDark"
+                android:textSize="13sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+    </RelativeLayout>
+
+
+    <LinearLayout
+        android:id="@+id/LayoutAlert"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/title"
+        android:layout_margin="5dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/rounded_alert_style"
+        android:elevation="5dp"
+        android:layoutDirection="ltr"
+        android:orientation="vertical"
+        android:padding="8dp"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/txtAlert"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fontFamily="@font/vazir_medium"
+            android:justificationMode="inter_word"
+            android:padding="8dp"
+            android:textColor="@color/white"
+            android:textSize="12sp"
+            tools:text="باتوجه به اختلالات موجود در شبکه ارتباطات ایران، درصورتی که در کوتاه کردن لینک مشکلی مشاهده شد، VPN خود را خاموش کرده و مججدا تلاش کنید." />
+
+        <TextView
+            android:id="@+id/btnOK_Alert"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="?attr/selectableItemBackground"
+            android:padding="4dp"
+            android:text="خب"
+            android:textColor="@color/MainColor" />
+    </LinearLayout>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/AD_CardView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/title"
+        android:layout_marginTop="18dp"
+        android:backgroundTint="#29343A"
+        android:foreground="?attr/selectableItemBackground"
+        app:cardCornerRadius="8dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center">
+
+            <ImageView
+                android:id="@+id/AD_ImageView"
+                android:layout_width="64dp"
+                android:layout_height="64dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:adjustViewBounds="true"
+                android:src="@drawable/my_cc_icon" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@+id/AD_ImageView"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="2dp">
+
+                <TextView
+                    android:id="@+id/AD_Title_TextView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/vazir_black"
+                    android:text="کــارت‌هــای‌مــن"
+                    android:textColor="@color/white" />
+
+                <TextView
+                    android:id="@+id/AD_Desc_TextView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:alpha="0.8"
+                    android:fontFamily="@font/vazir_light"
+                    android:text="جعبه ابزار کارت های شما | ذخیره کارت، دریافت شبا و رمز پویا"
+                    android:textColor="@color/white"
+                    android:textSize="12sp" />
+            </LinearLayout>
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/animationView"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_above="@id/Inputs"
+        android:layout_below="@+id/AD_CardView"
+        android:layout_centerInParent="true"
+        android:layout_margin="32dp"
+        android:padding="8dp"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true"
+        app:lottie_rawRes="@raw/astronaut_blue"
+        app:lottie_speed="0.51" />
+
+    <RelativeLayout
+        android:layout_width="250dp"
+        android:layout_height="200dp"
+        android:layout_centerInParent="true"
+        android:background="@drawable/style_output_textview"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/txtStats"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/statsInfo"
+            android:layout_centerHorizontal="true"
+            android:fontFamily="@font/vazir_black"
+            android:gravity="center"
+            android:letterSpacing="-0.04"
+            android:textSize="85sp"
+            android:textStyle="bold"
+            tools:text="4559" />
+
+        <TextView
+            android:id="@+id/statsInfo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="8dp"
+            android:gravity="center"
+            android:text="مجموع لینک های یکتا کوتاه شده"
+            android:textAlignment="center" />
+
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/Inputs"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:orientation="vertical"
+        android:padding="8dp">
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fab_Paste"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:layout_marginBottom="15dp"
+            android:elevation="1dp"
+            android:src="@drawable/ic_paste_24"
+            app:elevation="2dp"
+            app:fabCustomSize="50dp"
+            app:maxImageSize="25dp"
+            app:tint="@android:color/white" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:orientation="vertical"
+            app:startIconDrawable="@drawable/ic_link"
+            app:startIconTint="#8C000000">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/inputURL"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/vazir_black"
+                android:hint="آدرس طولانـــــی سایت"
+                android:singleLine="true"
+                android:textColor="@color/black"
+                android:textCursorDrawable="@null"
+                android:textSize="17sp" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <RelativeLayout
+            android:id="@+id/btnGO"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_gravity="center_horizontal"
+            android:animateLayoutChanges="true"
+            android:background="@drawable/ripple_for_btn"
+            android:elevation="2dp"
+            android:layoutDirection="ltr">
+
+            <TextView
+                android:id="@+id/Go_MainContent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:fontFamily="@font/vazir_black"
+                android:text="کوتاهش کن!"
+                android:textColor="@color/white"
+                android:textSize="18sp" />
+
+            <LinearLayout
+                android:id="@+id/Go_LoadingContent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/vazir_black"
+                    android:text="درحال دریافت اطلاعات..."
+                    android:textColor="@color/white"
+                    android:textSize="16sp" />
+
+                <ProgressBar
+                    android:layout_width="26dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="8dp"
+                    android:indeterminateTint="@color/white" />
+            </LinearLayout>
+
+        </RelativeLayout>
+    </LinearLayout>
+
+</RelativeLayout>

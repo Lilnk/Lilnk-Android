@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:animateLayoutChanges="true"
+    android:background="?attr/selectableItemBackground"
+    android:layoutDirection="ltr"
+    android:padding="12dp">
+
+    <ImageView
+        android:id="@+id/IV_HistoryQR"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:adjustViewBounds="true"
+        android:padding="4dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/test_qr" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="8dp"
+        android:layout_toRightOf="@id/IV_HistoryQR"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/TV_HistoryShort"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:maxLength="40"
+            android:maxLines="1"
+            android:text="lilnk.ir/yBw"
+            android:textColor="@color/black"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/TV_HistoryLong"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:maxLength="40"
+            android:maxLines="1"
+            android:text="https://www.google.com/search?q=%D8%B3%D9%84%D8%A7%D9%85oq=%D8%B3%D9%84%D8%A7%D9%85aqs=edge..69i57l2j69i59j69i60l3.1006j0j1sourceid=chromeie=UTF-8" />
+    </LinearLayout>
+</RelativeLayout>
