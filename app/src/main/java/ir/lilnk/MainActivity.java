@@ -112,8 +112,7 @@ public class MainActivity extends AppCompatActivity implements ApiService.OnIPIn
         findViewById(R.id.AD_CardView).setOnClickListener(v -> {
             if (Statics.Market == 'M')
                 To_Myket("myket://download/Arash.MyCreditCard");
-            if(Statics.Market == 'B')
-            {
+            if (Statics.Market == 'B') {
                 Intent B_intent = new Intent(Intent.ACTION_VIEW);
                 B_intent.setData(Uri.parse("bazaar://details?id=Arash.MyCreditCard"));
                 B_intent.setPackage("com.farsitel.bazaar");
@@ -224,7 +223,6 @@ public class MainActivity extends AppCompatActivity implements ApiService.OnIPIn
         }
     }
 
-
     private void DoWork() {
         apiService.getIPData(MainActivity.this);
     }
@@ -319,6 +317,10 @@ public class MainActivity extends AppCompatActivity implements ApiService.OnIPIn
             myView.findViewById(R.id.Btn_Comment).setOnClickListener(v -> ToComments_Bazaar());
             myView.findViewById(R.id.BtnOtherApps).setOnClickListener(v -> ToApps_Bazaar());
         }
+
+        myView.findViewById(R.id.VerName).setOnClickListener(v -> {
+            startActivity(new Intent(MainActivity.this, htmlViewer.class));
+        });
 
         bottomSheetDialog.setContentView(myView);
         bottomSheetDialog.show();

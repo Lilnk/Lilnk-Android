@@ -2,6 +2,10 @@ plugins {
     id 'com.android.application'
 }
 
+def Secrets_PropertiesFiles = rootProject.file("secrts.properties")
+def SecretsProperties = new Properties()
+SecretsProperties.load(new FileInputStream(Secrets_PropertiesFiles))
+
 android {
     compileSdkVersion 30
     buildToolsVersion "30.0.3"
@@ -11,7 +15,14 @@ android {
         minSdkVersion 26
         targetSdkVersion 30
         versionCode 9
-        versionName "1.9 - Myket"
+        versionName "1.9 - Bazaar"
+
+        buildConfigField("String", "Secret_Run", SecretsProperties['Secret_Run'])
+        buildConfigField("String", "Secret_Alert", SecretsProperties['Secret_Alert'])
+        buildConfigField("String", "Secret_API", SecretsProperties['Secret_API'])
+        buildConfigField("String", "Secret_APIHeader", SecretsProperties['Secret_APIHeader'])
+        buildConfigField("String", "Secret_APIHeaderValue", SecretsProperties['Secret_APIHeaderValue'])
+
         archivesBaseName = "Lilnk - v$versionCode - ($versionName)"
     }
 
@@ -50,4 +61,6 @@ dependencies {
     //Glide
     implementation 'com.github.bumptech.glide:glide:4.12.0'
     annotationProcessor 'com.github.bumptech.glide:compiler:4.12.0'
+    //SwipeRefreshLayout
+    implementation "androidx.swiperefreshlayout:swiperefreshlayout:1.1.0"
 }

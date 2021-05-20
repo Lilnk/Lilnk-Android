@@ -24,7 +24,6 @@
         android:layout_height="wrap_content"
         android:fontFamily="@font/vazir_black"
         android:gravity="center_vertical|right"
-        android:paddingLeft="16dp"
         android:paddingRight="16dp"
         android:text="دربـــاره"
         android:textColor="@color/black"
@@ -38,7 +37,6 @@
         android:layout_height="45dp"
         android:background="?attr/selectableItemBackground"
         android:clickable="true"
-        android:focusable="true"
         android:gravity="right|center"
         android:orientation="horizontal"
         android:paddingLeft="16dp"
@@ -71,7 +69,6 @@
         android:layout_marginBottom="3dp"
         android:background="?attr/selectableItemBackground"
         android:clickable="true"
-        android:focusable="true"
         android:gravity="right|center"
         android:orientation="horizontal"
         android:paddingLeft="16dp"
@@ -102,10 +99,8 @@
         android:id="@+id/inGithubLayout"
         android:layout_width="match_parent"
         android:layout_height="45dp"
-        android:layout_marginBottom="3dp"
         android:background="?attr/selectableItemBackground"
         android:clickable="true"
-        android:focusable="true"
         android:gravity="right|center"
         android:orientation="horizontal"
         android:paddingLeft="16dp"
@@ -131,30 +126,19 @@
 
     </LinearLayout>
 
-    <LinearLayout
+    <TextView
+        android:id="@+id/VerName"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="3dp"
-        android:clickable="true"
-        android:focusable="true"
+        android:layout_gravity="center"
+        android:alpha="0.5"
+        android:background="?attr/selectableItemBackground"
+        android:fontFamily="@font/vazir_regular_fa_num"
         android:gravity="center"
-        android:orientation="horizontal"
-        android:paddingLeft="16dp"
-        android:paddingRight="16dp">
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:alpha="0.5"
-            android:fontFamily="@font/vazir_regular_fa_num"
-            android:text="@string/VerNameInBtmSheet"
-            android:textColor="@color/black"
-            android:textSize="12sp" />
-    </LinearLayout>
-
-    <View
-        android:layout_width="wrap_content"
-        android:layout_height="10dp" />
+        android:paddingTop="6dp"
+        android:paddingBottom="10dp"
+        android:text="@string/VerNameInBtmSheet"
+        android:textColor="@color/black"
+        android:textSize="12sp" />
 
 </LinearLayout>

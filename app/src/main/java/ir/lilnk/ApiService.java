@@ -25,18 +25,18 @@ public class ApiService {
     }
 
     public void getIPData(final OnIPInfoReceived URL_Data) {
-        JsonObjectRequest request = new JsonObjectRequest(Request.Method.GET, "https://lilnk.ir/temp/main.php?url=" + LongURL
+        JsonObjectRequest request = new JsonObjectRequest(Request.Method.GET, BuildConfig.Secret_API + LongURL
                 , null, response -> {
             Log.i("MyApp", "onResponse: " + response.toString());
             URL_Data.OnReceived(parsResponse(response));
         }, error -> {
             Log.i("MyAppErr", "onErrorResponse: " + error.toString());
             URL_Data.OnReceived(null);
-        }){
+        }) {
             @Override
             public Map<String, String> getHeaders() {
                 Map<String, String> params = new HashMap<>();
-                params.put("FuckThe", "Assholes");
+                params.put(BuildConfig.Secret_APIHeader, BuildConfig.Secret_APIHeaderValue);
                 return params;
             }
         };

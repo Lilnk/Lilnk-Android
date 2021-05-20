@@ -2,6 +2,6 @@ package ir.lilnk;
 
 public class Statics {
 
-    public static final char Market = 'M'; // Myket: M | Bazaar: B
+    public static final char Market = 'B'; // Myket: M | Bazaar: B
 
 }

@@ -6,16 +6,16 @@
     android:animateLayoutChanges="true"
     android:background="@drawable/rounded_btm"
     android:layoutDirection="ltr"
-    android:padding="4dp"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:padding="4dp">
 
     <ImageView
         android:layout_width="40dp"
         android:layout_height="16dp"
         android:layout_gravity="center"
+        android:layout_marginBottom="12dp"
         android:alpha="0.3"
         android:padding="8dp"
-        android:layout_marginBottom="12dp"
         android:scaleType="centerCrop"
         android:src="@drawable/minus"
         app:tint="@color/black" />
@@ -31,10 +31,10 @@
         app:startIconTint="#8C000000">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:enabled="false"
             android:id="@+id/txtShortLink"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:enabled="false"
             android:fontFamily="@font/vazir_black"
             android:hint="لینک کوتاه شده"
             android:singleLine="true"

@@ -33,9 +33,9 @@ public class SplashActivity extends Activity {
             @Override
             public void run() {
                 try {
-                    String serverResult = OkHTTP("https://lilnk.ir/run.html");
+                    String serverResult = OkHTTP(BuildConfig.Secret_Run);
                     if (serverResult.equals("0")) {
-                        AlertResult = OkHTTP("https://lilnk.ir/temp/alerts.php");
+                        AlertResult = OkHTTP(BuildConfig.Secret_Alert);
                         startActivity(new Intent(SplashActivity.this, MainActivity.class));
                     } else {
                         runOnUiThread(() -> new AlertDialog.Builder(SplashActivity.this)
